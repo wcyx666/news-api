@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2018-10-16 11:54:38
+-- Generation Time: 2018-10-17 11:42:01
 -- 服务器版本： 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -69,6 +69,32 @@ CREATE TABLE `wx_news_banner` (
 INSERT INTO `wx_news_banner` (`name`, `url`, `id`) VALUES
 ('网络', 'http://127.0.0.1/img/banner.png', '1'),
 ('网络', 'http://127.0.0.1/img/banner1.png', '2');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_news_comment`
+--
+
+CREATE TABLE `wx_news_comment` (
+  `id` varchar(100) NOT NULL,
+  `uid` varchar(100) NOT NULL,
+  `articleid` varchar(100) NOT NULL,
+  `nickName` varchar(50) NOT NULL,
+  `avatarUrl` varchar(1000) NOT NULL,
+  `content` varchar(1000) NOT NULL,
+  `hour` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wx_news_comment`
+--
+
+INSERT INTO `wx_news_comment` (`id`, `uid`, `articleid`, `nickName`, `avatarUrl`, `content`, `hour`) VALUES
+('d0130d4b74517467505e364441d1419f', 'o6gTi5M4MUZBVOFUoNVAPHSE1pqg', 'wz2018101693087', '九八七', 'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqQSgXianTD2fXbPf2gn5ZkXZn2gLSL4eZSHqAicypCibicK1UzaaCv5dn1hjX9vV1tS1byiaId9Acx8VQ/132', '11111111', '2018/10/17 11:53:57'),
+('8bd12568d7cc59de60a9d2f5b0825932', 'o6gTi5M4MUZBVOFUoNVAPHSE1pqg', 'wz2018101693087', '九八七', 'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqQSgXianTD2fXbPf2gn5ZkXZn2gLSL4eZSHqAicypCibicK1UzaaCv5dn1hjX9vV1tS1byiaId9Acx8VQ/132', '真可以的', '2018/10/17 12:20:24'),
+('6d7b3f538e67e0220ef5416f63578008', 'o6gTi5M4MUZBVOFUoNVAPHSE1pqg', 'wz2018101693087', '九八七', 'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqQSgXianTD2fXbPf2gn5ZkXZn2gLSL4eZSHqAicypCibicK1UzaaCv5dn1hjX9vV1tS1byiaId9Acx8VQ/132', '这么会这样', '2018/10/17 12:21:35'),
+('725077b003e1e32068f140da5a055867', 'o6gTi5M4MUZBVOFUoNVAPHSE1pqg', 'wz2018101565073', '九八七', 'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqQSgXianTD2fXbPf2gn5ZkXZn2gLSL4eZSHqAicypCibicK1UzaaCv5dn1hjX9vV1tS1byiaId9Acx8VQ/132', '真不错', '2018/10/17 12:24:48');
 
 -- --------------------------------------------------------
 
