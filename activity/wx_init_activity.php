@@ -5,6 +5,7 @@
     date_default_timezone_set('PRC');
 
     if(isset($_POST['title'])){
+
 		$title = $_POST['title']; // 上传作者
 
 		$name = $_POST['name']; // 上传作者
@@ -17,9 +18,7 @@
 
 		$id = 'wz'. date('Ymd') . str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT); // 订单号id
 
-		$local = $_POST['local']; 
-
-		$sql_insert = "INSERT INTO wx_news_article (id, title, name, content, dates, img, local ) VALUES ('$id', '$title', '$name', '$content', '$dates', '$img', '$local' )";
+		$sql_insert = "INSERT INTO wx_news_activity (id, title, name, content, dates, img ) VALUES ('$id', '$title', '$name', '$content', '$dates', '$img' )";
 		   
 		if ($conn->query($sql_insert) === TRUE) { 
 		    $json_arr = array(
@@ -34,12 +33,3 @@
 		echo $login_json;//发送json数据*/
 
     }
-
-
-    
-		
-   
-    
-    
-
-
